@@ -1,52 +1,101 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body, html {
-  height: 100%;
-  font-family: 'Segoe UI', sans-serif;
-  color: white;
-  overflow: hidden;
-}
-#bg-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-.overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 30px;
-  border-radius: 15px;
-  backdrop-filter: blur(8px);
-}
-.overlay h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-.overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.overlay a {
-  display: inline-block;
-  margin: 10px 10px;
-  padding: 10px 20px;
-  background: #ff4081;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-.overlay a:hover {
-  background: #e91e63;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arya Mehta - Anime Coder</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 40px 25px;
+      border-radius: 15px;
+      backdrop-filter: blur(8px);
+      max-width: 90%;
+      width: 500px;
+    }
+
+    .overlay h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .overlay p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .overlay a {
+      display: inline-block;
+      margin: 10px 10px;
+      padding: 10px 20px;
+      background: #ff4081;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .overlay a:hover {
+      background: #e91e63;
+    }
+
+    @media (max-width: 576px) {
+      .overlay h1 {
+        font-size: 1.8rem;
+      }
+      .overlay p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video Background -->
+  <video autoplay muted loop id="bg-video" playsinline>
+    <source src="madara.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay Content -->
+  <div class="overlay text-white shadow-lg">
+    <h1>⚔️ Arya Mehta</h1>
+    <p>Anime + AI | Full Stack Dev | Madara Mindset</p>
+    <a href="https://github.com/aryamehta0302" class="btn">🌐 View GitHub</a>
+    <a href="https://raw.githubusercontent.com/aryamehta0302/aryamehta0302/main/resume.pdf" target="_blank" class="btn">📄 View Resume</a>
+  </div>
+
+</body>
+</html>
